@@ -90,3 +90,13 @@ fastlane/test_output
 iOSInjectionProject/
 
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Swift
+
+
+# Assets (if you don't want to track changes in these directories)
+Assets.xcassets/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.mov
