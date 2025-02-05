@@ -93,6 +93,7 @@ iOSInjectionProject/
 
 
 # Assets (if you don't want to track changes in these directories)
+.Assets.xcassets/
 Assets.xcassets/
 *.png
 *.jpg
