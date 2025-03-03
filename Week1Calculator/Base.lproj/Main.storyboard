@@ -19,13 +19,34 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mars-landscape-background-with-flat-design_23-2147979445" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-mU-ZEP">
                                 <rect key="frame" x="-26" y="0.0" width="419" height="852"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="screen" translatesAutoresizingMaskIntoConstraints="NO" id="AHF-zP-rIJ">
+                                <rect key="frame" x="76" y="76" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58F-Al-6D8">
+                                <rect key="frame" x="124" y="130" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="l2y-0d-4Vc">
+                                <rect key="frame" x="76" y="242" width="240" height="586"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="I8g-mU-ZEP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1DD-mB-ypo"/>
+                            <constraint firstItem="AHF-zP-rIJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="CRs-g2-qg7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="58F-Al-6D8" secondAttribute="trailing" constant="87" id="CvX-cF-ixn"/>
+                            <constraint firstItem="58F-Al-6D8" firstAttribute="centerY" secondItem="AHF-zP-rIJ" secondAttribute="centerY" id="TFc-cl-ZPg"/>
+                            <constraint firstItem="AHF-zP-rIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJv-Wg-hXO"/>
                             <constraint firstItem="I8g-mU-ZEP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aDr-Zt-BDm"/>
+                            <constraint firstItem="AHF-zP-rIJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="cig-p5-g6S"/>
                             <constraint firstItem="I8g-mU-ZEP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="dR5-tJ-d3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AHF-zP-rIJ" secondAttribute="bottom" constant="614" id="ksL-MQ-n9H"/>
+                            <constraint firstItem="58F-Al-6D8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="71" id="oJx-Tl-Lxy"/>
+                            <constraint firstItem="58F-Al-6D8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="162" id="w7O-Qw-AYU"/>
                             <constraint firstItem="I8g-mU-ZEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-42" id="yia-ne-dtC"/>
                         </constraints>
                     </view>
@@ -37,6 +58,7 @@
     </scenes>
     <resources>
         <image name="mars-landscape-background-with-flat-design_23-2147979445" width="626" height="626"/>
+        <image name="screen" width="829" height="284"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
