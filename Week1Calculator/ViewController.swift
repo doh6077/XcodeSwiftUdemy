@@ -33,14 +33,27 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func playSound(){
+        let path = Bundle.main.path(forResource: "click.mp3", ofType: nil)!
+        
+        let url = URL(fileURLWithPath: path)
+        
+        do{
+            btnSound = try AVAudioPlayer(contentsOf: url)
+            btnSound.play()
+        }catch{}
+        
+    }
+    
     @IBAction func numberBtn(_ sender: UIButton){
         //When we press a number on the calculator
+        playSound()
         
     }
     
     @IBAction func operators(_ sender: UIButton){
         // when we press an operator on the calculator
-        
+        playSound()
     }
 
 
