@@ -22,6 +22,7 @@
 		394999EB27B5BD00004A3E5E /* PageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394999EA27B5BD00004A3E5E /* PageVC.swift */; };
 		9CC8A2122D77EDC7005A4464 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9CC8A2112D77EDC7005A4464 /* FacebookCore */; };
 		9CC8A2142D77EDC7005A4464 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9CC8A2132D77EDC7005A4464 /* FacebookLogin */; };
+		9CC8A2162D77EF7D005A4464 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC8A2152D77EF7D005A4464 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		394999B227B5B723004A3E5E /* ChildVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC1.swift; sourceTree = "<group>"; };
 		394999B427B5B734004A3E5E /* ChildVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildVC2.swift; sourceTree = "<group>"; };
 		394999EA27B5BD00004A3E5E /* PageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageVC.swift; sourceTree = "<group>"; };
+		9CC8A2152D77EF7D005A4464 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9CC8A2172D77FE4A005A4464 /* TabBarController.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TabBarController.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +77,7 @@
 		3949999D27B5B188004A3E5E /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				9CC8A2172D77FE4A005A4464 /* TabBarController.entitlements */,
 				3949999E27B5B188004A3E5E /* AppDelegate.swift */,
 				394999A027B5B188004A3E5E /* SceneDelegate.swift */,
 				394999B427B5B734004A3E5E /* ChildVC2.swift */,
@@ -88,6 +92,7 @@
 				394999A727B5B18A004A3E5E /* Assets.xcassets */,
 				394999A927B5B18A004A3E5E /* LaunchScreen.storyboard */,
 				394999AC27B5B18A004A3E5E /* Info.plist */,
+				9CC8A2152D77EF7D005A4464 /* LoginViewController.swift */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -170,6 +175,7 @@
 				39197CB129BAAA1900ABBC18 /* CollectionViewController.swift in Sources */,
 				394999A327B5B188004A3E5E /* TabBarVC.swift in Sources */,
 				39197CB029BAAA1900ABBC18 /* TableViewCell.swift in Sources */,
+				9CC8A2162D77EF7D005A4464 /* LoginViewController.swift in Sources */,
 				39197CAF29BAAA1900ABBC18 /* TableViewController.swift in Sources */,
 				394999EB27B5BD00004A3E5E /* PageVC.swift in Sources */,
 				394999B527B5B734004A3E5E /* ChildVC2.swift in Sources */,
@@ -322,9 +328,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TabBarController/TabBarController.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDQS4882Z8;
+				DEVELOPMENT_TEAM = ZG7YPKB4JY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabBarController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -350,9 +357,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TabBarController/TabBarController.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VDQS4882Z8;
+				DEVELOPMENT_TEAM = ZG7YPKB4JY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabBarController/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
