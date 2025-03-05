@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
             
             let token = token.tokenString
             let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                     parameters: ["fields":"email, name"],
+                                                     parameters: ["fields":"email"],
                                                      tokenString: token,
                                                      version: nil,
                                                      httpMethod: .get)
@@ -43,11 +43,13 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
         let token = result?.token?.tokenString
         
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                 parameters: ["fields":"email, name"],
+                                                 parameters: ["fields":"email"],
                                                  tokenString: token,
                                                  version: nil,
                                                  httpMethod: .get)
         request.start(completion: { connection, result, error in print("\(result)")})
+        
+
 
     }
     
@@ -62,6 +64,8 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                 window.rootViewController = tabBarController
                 window.makeKeyAndVisible()
             }
+            
+            print("The login is successful")
         }
     }
 }
