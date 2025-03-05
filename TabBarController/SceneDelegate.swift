@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  TabBarController
-//
-//  Created by Apptist Inc. on 2022-02-10.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -58,4 +51,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
