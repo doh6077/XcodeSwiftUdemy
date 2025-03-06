@@ -10,22 +10,28 @@ import Foundation
 import UIKit
 
 class FourthViewController: UIViewController {
-
+    var firstName: String?
+    var lastName: String?
+    var date: String?
     
-    @IBOutlet weak var datePicker: UIDatePicker!
-
+    @IBOutlet weak var userInfo: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Fourth"
+
         view.backgroundColor = .blue
         
-        // Do any additional setup after loading the view.
-    }
-
-    @IBAction func submitBtnPressed(_ sender: UIButton) {
+        // Display user info
+        let userInfoText = """
+                First Name: \(firstName ?? "Not provided")
+                Last Name: \(lastName ?? "Not provided")
+                Birth Date: \(date ?? "Not Provided")
+                """
+        userInfo.text = userInfoText
         
-
-        print(datePicker.date)
     }
+    
+
+
     
 }

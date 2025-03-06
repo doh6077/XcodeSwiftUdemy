@@ -170,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="3503" y="857"/>
         </scene>
-        <!--Gender-->
+        <!--Birth Date-->
         <scene sceneID="FJe-Hm-diL">
             <objects>
                 <viewController storyboardIdentifier="ThidViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tLF-Fo-bhZ" customClass="ThidViewController" customModule="TabBarController" sceneMemberID="viewController">
@@ -187,18 +187,42 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Birth Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJ1-8D-CAC">
+                                <rect key="frame" x="81" y="488" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k63-OD-Sbn">
+                                <rect key="frame" x="154" y="610" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="birthBtn:" destination="tLF-Fo-bhZ" eventType="touchUpInside" id="PAK-jt-ncQ"/>
+                                    <segue destination="X3h-Ns-fDz" kind="show" identifier="goToFourth" id="E8Q-a9-7bh"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Via-8m-6eg">
+                                <rect key="frame" x="224" y="488" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tg8-RC-qxl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Gender" id="Znl-pG-kRX"/>
+                    <navigationItem key="navigationItem" title="Birth Date" id="Znl-pG-kRX"/>
                     <connections>
+                        <outlet property="date" destination="Via-8m-6eg" id="Loh-ZV-LGp"/>
                         <outlet property="lastNameText" destination="r1f-fq-F9a" id="hav-xh-3jW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6S-vy-Fma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4366" y="871"/>
+            <point key="canvasLocation" x="4365.6716417910447" y="870.48054919908463"/>
         </scene>
         <!--User Info-->
         <scene sceneID="AiD-Dw-79x">
@@ -207,10 +231,24 @@
                     <view key="view" contentMode="scaleToFill" id="udc-9U-IPL">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qX9-dC-Uof">
+                                <rect key="frame" x="90" y="323" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GyK-1k-foH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="User Info" id="H9m-lW-iit"/>
+                    <connections>
+                        <outlet property="userInfo" destination="qX9-dC-Uof" id="o2B-4M-NKS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txI-tz-2Ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,6 +307,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="E8Q-a9-7bh"/>
         <segue reference="fQ4-IP-wtf"/>
         <segue reference="AEq-uf-LwA"/>
     </inferredMetricsTieBreakers>
