@@ -26,10 +26,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         
         //AccessToken.current = nil
+        // debugging purpose
         if let token = AccessToken.current {
-                print("✅ Facebook Access Token Found: \(token)")
+                print("\(token)")
             } else {
-                print("❌ No Facebook Access Token Found")
+                print("❌")
             }
         // Check if user is already logged in with Facebook
         if let token = AccessToken.current, !token.isExpired {
@@ -40,8 +41,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             self.window?.rootViewController = mainVC
 
-            print(token)
-            print("✅ User is already logged in, navigating to TabBarController")
         } else {
             // User is not logged in, show the Facebook login page
             let loginVC = LoginViewController()

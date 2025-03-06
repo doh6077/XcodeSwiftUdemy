@@ -47,7 +47,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
             view.addSubview(loginButton)
         }
     }
-    // fix th
+
     func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: (any Error)?) {
         let token = result?.token?.tokenString
         
@@ -59,11 +59,11 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
 
             request.start(completion: { connection, result, error in
                 if let error = error {
-                    print("❌ Graph Request Error: \(error.localizedDescription)")
+                    print("\(error.localizedDescription)")
                 } else {
-                    print("✅ Login successful: \(String(describing: result))")
+                    print("\(String(describing: result))")
                     
-                    // Ensure UI updates happen on the main thread
+                    // Direct user to a Tab Bar controller.
                     DispatchQueue.main.async {
                         self.navigateToMainApp()
                     }
