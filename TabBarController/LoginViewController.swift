@@ -27,10 +27,16 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                                                      tokenString: token,
                                                      version: nil,
                                                      httpMethod: .get)
-            request.start(completion: { connection, result, error in print("\(result)")})
-            print("The login is successful")
-            navigateToMainApp()
-            
+            request.start(completion: { connection, result, error in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    } else {
+                        print("✅ Login successful: \(String(describing: result))")
+                        DispatchQueue.main.async {
+                            self.navigateToMainApp()  
+                        }
+                    }
+                })
         }
         else{
             let loginButton = FBLoginButton()
@@ -41,15 +47,28 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
             view.addSubview(loginButton)
         }
     }
+    // fix th
     func loginButton(_ loginButton: FBSDKLoginKit.FBLoginButton, didCompleteWith result: FBSDKLoginKit.LoginManagerLoginResult?, error: (any Error)?) {
         let token = result?.token?.tokenString
         
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
-                                                 parameters: ["fields":"email"],
-                                                 tokenString: token,
-                                                 version: nil,
-                                                 httpMethod: .get)
-        request.start(completion: { connection, result, error in print("\(result)")})
+                                                     parameters: ["fields":"email"],
+                                                     tokenString: token,
+                                                     version: nil,
+                                                     httpMethod: .get)
+
+            request.start(completion: { connection, result, error in
+                if let error = error {
+                    print("❌ Graph Request Error: \(error.localizedDescription)")
+                } else {
+                    print("✅ Login successful: \(String(describing: result))")
+                    
+                    // Ensure UI updates happen on the main thread
+                    DispatchQueue.main.async {
+                        self.navigateToMainApp()
+                    }
+                }
+            })
 
         
 
