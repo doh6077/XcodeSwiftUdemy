@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="2713" y="65"/>
         </scene>
-        <!--First View Controller-->
+        <!--First Name-->
         <scene sceneID="cdD-15-5Zw">
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="L6u-Sx-Ukc" customClass="FirstViewController" customModule="TabBarController" sceneMemberID="viewController">
@@ -107,7 +107,7 @@
                             <constraint firstItem="XG2-JI-f2X" firstAttribute="leading" secondItem="shA-Z2-pgX" secondAttribute="leading" constant="156" id="Cf3-6B-koB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="V4q-xl-zmQ"/>
+                    <navigationItem key="navigationItem" title="First Name" id="V4q-xl-zmQ"/>
                     <connections>
                         <outlet property="firstName" destination="Gss-Dh-tK6" id="uK7-U1-yiR"/>
                     </connections>
@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="2711.9402985074626" y="857.43707093821502"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Last Name-->
         <scene sceneID="BC0-d4-JoY">
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GlK-YH-M8Y" customClass="SecondViewController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
@@ -133,20 +133,44 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPe-38-DSj">
+                                <rect key="frame" x="59" y="473" width="87" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IKL-cF-ofV">
+                                <rect key="frame" x="196" y="473" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9T5-zH-EFT">
+                                <rect key="frame" x="151" y="660" width="78" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitBtn:" destination="GlK-YH-M8Y" eventType="touchUpInside" id="kQl-WB-4ts"/>
+                                    <segue destination="tLF-Fo-bhZ" kind="show" identifier="goToThird" id="fQ4-IP-wtf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GWp-53-K9M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HC4-oS-1Xo"/>
+                    <navigationItem key="navigationItem" title="Last Name" id="HC4-oS-1Xo"/>
                     <connections>
                         <outlet property="firstNameText" destination="Sa5-lw-bUb" id="PTL-00-0f3"/>
+                        <outlet property="lastName" destination="IKL-cF-ofV" id="kbF-V4-O3T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IR2-E2-fqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3503" y="857"/>
         </scene>
-        <!--Thid View Controller-->
+        <!--Gender-->
         <scene sceneID="FJe-Hm-diL">
             <objects>
                 <viewController storyboardIdentifier="ThidViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tLF-Fo-bhZ" customClass="ThidViewController" customModule="TabBarController" sceneMemberID="viewController">
@@ -154,86 +178,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tH-od-fJ4">
-                                <rect key="frame" x="80" y="303.66666666666669" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZcW-iz-V1Y">
-                                <rect key="frame" x="177" y="297" width="97" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="97" id="stR-4E-Fts"/>
-                                </constraints>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="r1f-fq-F9a">
+                                <rect key="frame" x="81" y="213" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h4V-Uf-g8b">
-                                <rect key="frame" x="164" y="410" width="74" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="submitBtn:" destination="tLF-Fo-bhZ" eventType="touchUpInside" id="y0Z-B0-rv9"/>
-                                </connections>
-                            </button>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tg8-RC-qxl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="ZcW-iz-V1Y" firstAttribute="centerY" secondItem="0tH-od-fJ4" secondAttribute="centerY" id="Lob-ae-GFL"/>
-                            <constraint firstItem="ZcW-iz-V1Y" firstAttribute="leading" secondItem="0tH-od-fJ4" secondAttribute="trailing" constant="52" id="Mvd-Op-Xja"/>
-                            <constraint firstItem="ZcW-iz-V1Y" firstAttribute="top" secondItem="tg8-RC-qxl" secondAttribute="top" constant="191" id="WEb-ed-kXf"/>
-                            <constraint firstItem="h4V-Uf-g8b" firstAttribute="centerX" secondItem="Epx-5J-VaB" secondAttribute="centerX" id="ggE-A4-xQ1"/>
-                            <constraint firstItem="tg8-RC-qxl" firstAttribute="trailing" secondItem="ZcW-iz-V1Y" secondAttribute="trailing" constant="128" id="hMT-0V-Y8z"/>
-                            <constraint firstItem="h4V-Uf-g8b" firstAttribute="leading" secondItem="tg8-RC-qxl" secondAttribute="leading" constant="164" id="npl-vX-28C"/>
-                            <constraint firstItem="h4V-Uf-g8b" firstAttribute="top" secondItem="ZcW-iz-V1Y" secondAttribute="bottom" constant="79" id="vXb-jB-G7x"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Znl-pG-kRX"/>
+                    <navigationItem key="navigationItem" title="Gender" id="Znl-pG-kRX"/>
                     <connections>
-                        <outlet property="name" destination="ZcW-iz-V1Y" id="wle-Wu-ZRV"/>
+                        <outlet property="lastNameText" destination="r1f-fq-F9a" id="hav-xh-3jW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6S-vy-Fma" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4366" y="871"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--User Info-->
         <scene sceneID="AiD-Dw-79x">
             <objects>
                 <viewController storyboardIdentifier="FourthViewController" id="X3h-Ns-fDz" customClass="FourthViewController" customModule="TabBarController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="udc-9U-IPL">
                         <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Name is " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7v-oe-zWK">
-                                <rect key="frame" x="63" y="164" width="105" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zo6-Ne-Iyv">
-                                <rect key="frame" x="158" y="653" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="submitBtnPressed:" destination="X3h-Ns-fDz" eventType="touchUpInside" id="Yna-00-oCc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Birthday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="990-Hg-uBP">
-                                <rect key="frame" x="52" y="312" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GyK-1k-foH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="H9m-lW-iit"/>
+                    <navigationItem key="navigationItem" title="User Info" id="H9m-lW-iit"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txI-tz-2Ud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,6 +269,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="fQ4-IP-wtf"/>
         <segue reference="AEq-uf-LwA"/>
     </inferredMetricsTieBreakers>
     <resources>

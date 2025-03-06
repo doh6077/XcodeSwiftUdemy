@@ -11,21 +11,18 @@ import UIKit
 
 class ThidViewController: UIViewController {
 
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var lastNameText: UITextView!
     
-    
+    var firstName: String?
+    var lastName: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Third"
-        view.backgroundColor = .yellow
-        // Do any additional setup after loading the view.
-        
+        lastNameText.text = lastName
+
+
         
     }
     
-    @IBAction func submitBtn(_ sender: Any) {
-        
-        print(name.text)
-    }
+
     
 }
