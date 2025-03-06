@@ -14,6 +14,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //logout()
         
         view.backgroundColor = .white
         
@@ -27,6 +28,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                                                      version: nil,
                                                      httpMethod: .get)
             request.start(completion: { connection, result, error in print("\(result)")})
+            print("The login is successful")
             navigateToMainApp()
             
         }
@@ -48,6 +50,7 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                                                  version: nil,
                                                  httpMethod: .get)
         request.start(completion: { connection, result, error in print("\(result)")})
+
         
 
 
@@ -65,7 +68,26 @@ class LoginViewController: UIViewController, LoginButtonDelegate {
                 window.makeKeyAndVisible()
             }
             
-            print("The login is successful")
+            
         }
     }
+    
+    @objc func logout() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+
+        // Clear the token
+        AccessToken.current = nil
+
+        // Reset to the login screen
+        let loginVC = LoginViewController()
+        let navController = UINavigationController(rootViewController: loginVC)
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = navController
+            window.makeKeyAndVisible()
+        }
+        
+        print("Logged out successfully. Now you should see the login screen again.")
+    }
+
 }

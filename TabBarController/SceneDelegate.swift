@@ -29,15 +29,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let token = AccessToken.current, !token.isExpired {
             // User is logged in, show the main page
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController")
+            
+            
+            let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
             self.window?.rootViewController = mainVC
+            self.window?.makeKeyAndVisible()
+            
+
+            print(token)
+            print("login is successful")
         } else {
             // User is not logged in, show the Facebook login page
             let loginVC = LoginViewController()
-            self.window?.rootViewController = loginVC
+            let navController = UINavigationController(rootViewController: loginVC)
+            self.window?.rootViewController = navController
         }
 
         self.window?.makeKeyAndVisible()
     }
+ 
 }
 
