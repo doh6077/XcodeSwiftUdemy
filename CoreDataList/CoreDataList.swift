@@ -2,21 +2,43 @@
 //  TableViewController.swift
 //  CoreDataList
 //
-//  Created by Dohee Kim on 2025-03-25.
+//  Created by Apptist Inc. on 2025-03-25.
 //
 
 import UIKit
+import CoreData
 
-class TableViewController: UITableViewController {
+class CoreDataList: UITableViewController {
+    
+    //MARK: - Core Data Objects
+    
+    var people: [NSManagedObject] = [] ///where all the Person objects will be stored
 
+    //After the initial loaded view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forHeaderFooterViewReuseIdentifier: "Cell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    //Before the view appears
+    override func viewWillAppear(_ animated: Bool) {
+        //MARK: - Fetch the saved items from Core Data before the screen loads
+        
+        //Reference to App Delegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        
+        
+        //Getting a reference to the container that holds the data for Core Data
+        let managedContext = appDelegate.persistentContainer.viewContext
     }
 
     // MARK: - Table view data source
@@ -57,7 +79,7 @@ class TableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 
